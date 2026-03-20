@@ -3,68 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Terhenti - Klik untuk Memutar</title>
+    
+    <title>Rekomendasi Produk Shopee</title>
+    <meta property="og:title" content="Rekomendasi Produk Pilihan - Cek di Shopee!">
+    
+    <meta name="description" content="Perlindungan terbaik dan harga terjangkau. Klik untuk lihat detail produk di Shopee.">
+    <meta property="og:description" content="Perlindungan terbaik dan harga terjangkau. Klik untuk lihat detail produk di Shopee.">
+    
+    <meta property="og:image" content="https://cf.shopee.co.id/file/sg-11134201-22120-0y8f8p6y5vlv6e">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rekomendasi Produk Pilihan">
+    <meta name="twitter:description" content="Klik untuk melihat produk lengkapnya di Shopee.">
+    <meta name="twitter:image" content="https://cf.shopee.co.id/file/sg-11134201-22120-0y8f8p6y5vlv6e">
+
+    <script type="text/javascript">
+        window.location.href = "https://s.shopee.co.id/gLTvgM3lG";
+    </script>
+
     <style>
-        /* CSS Reset & Body Setup */
-        body { background-color: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        
-        /* Main Container for the Player */
-        .player-wrapper { width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #111 url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1000&auto=format&fit=crop') center/cover; position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.2s; }
-        .player-wrapper:active { transform: scale(0.98); }
-        
-        /* Background Blur Layer - Halus untuk fokus ke tombol Play */
-        .blur-overlay { width: 100%; height: 100%; background: inherit; filter: blur(6px) brightness(0.6); position: absolute; top: 0; left: 0; z-index: 5; }
-
-        /* Central Play Button (Rapi & Estetik) */
-        .central-play-trigger { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; width: 90px; height: 90px; background-color: rgba(255, 255, 255, 0.15); border: 4px solid rgba(255, 255, 255, 0.8); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
-        
-        /* Play Icon (Segitiga) */
-        .play-icon-svg { width: 45px; height: 45px; fill: white; margin-left: 5px; /* Sedikit geser agar visual lebih center */ }
-
-        /* Bottom Controls Bar (Tetap Rapi di 00:00) */
-        .controls-bar { position: absolute; bottom: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.95)); padding: 15px 20px; box-sizing: border-box; display: flex; align-items: center; gap: 15px; z-index: 20; }
-        .pause-icon { font-size: 20px; opacity: 0.8; font-weight: bold; }
-        
-        /* Time & Progress Bar */
-        .time { font-size: 14px; font-weight: bold; color: #ccc; letter-spacing: 0.5px; }
-        .progress-container { flex-grow: 1; height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; position: relative; }
-        .progress-fill { width: 0%; /* Dimulai dari 0 */ height: 100%; background: #ee1d25; border-radius: 3px; position: relative; }
-        .progress-handle { position: absolute; right: -6px; top: -4px; width: 13px; height: 13px; background: #ee1d25; border-radius: 50%; box-shadow: 0 0 5px rgba(238, 29, 37, 0.6); }
-
-        /* Fullscreen Icon */
-        .fullscreen-icon { font-size: 16px; opacity: 0.8; font-weight: bold; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f4f4f4; }
+        .loader { text-align: center; }
     </style>
 </head>
 <body>
-
-    <div class="player-wrapper" id="videoPlayer">
-        <div class="blur-overlay"></div>
-        
-        <div class="central-play-trigger">
-            <svg class="play-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z"/>
-            </svg>
-        </div>
-
-        <div class="controls-bar">
-            <span class="pause-icon">II</span>
-            <div class="progress-container">
-                <div class="progress-fill">
-                    <div class="progress-handle"></div>
-                </div>
-            </div>
-            <span class="time">00:00 / 16:07</span>
-            <span class="fullscreen-icon">[ ]</span>
-        </div>
+    <div class="loader">
+        <p>Mengarahkan Anda ke halaman produk...</p>
+        <p><a href="https://s.shopee.co.id/gLTvgM3lG">Klik di sini jika tidak otomatis dialihkan.</a></p>
     </div>
-
-    <script>
-        // REDIRECT OTOMATIS SAAT LAYAR DIKLIK (Rapi & Cepat)
-        document.getElementById('videoPlayer').addEventListener('click', function() {
-            // !!! GANTI LINK DI BAWAH INI DENGAN LINK SHOPEE ANDA !!!
-            // Gunakan penyingkat link (S.id, Bitly) agar lebih aman.
-            window.location.href = "https://s.shopee.co.id/gLTvgM3lG";
-        });
-    </script>
 </body>
 </html>
