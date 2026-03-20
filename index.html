@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akses Terbatas - 18+</title>
+    <title>Video Terhenti - Konfirmasi Pemutar</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .box { border: 2px solid #333; padding: 40px; border-radius: 20px; background: #111; max-width: 90%; }
-        .warning { color: #ff0000; font-weight: bold; font-size: 14px; text-transform: uppercase; }
-        h1 { font-size: 20px; margin: 20px 0; }
-        .btn { background: linear-gradient(to right, #ff416c, #ff4b2b); color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        body { background-color: #000; color: #fff; font-family: sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .video-container { width: 100%; max-width: 900px; position: relative; background: #000; cursor: pointer; aspect-ratio: 16/9; }
+        
+        /* Thumbnail Background */
+        .video-main { width: 100%; height: 100%; background: #111 url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1000&auto=format&fit=crop') center/cover; display: flex; justify-content: center; align-items: center; filter: blur(4px) brightness(0.6); }
+        
+        /* Animasi Loading */
+        .loader { border: 6px solid rgba(255,255,255,0.1); border-top: 6px solid #ff0000; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; position: absolute; z-index: 10; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Icon Play Tengah */
+        .play-btn { position: absolute; font-size: 70px; color: rgba(255,255,255,0.5); z-index: 5; }
+        
+        /* Bar Kontrol ala YouTube/Player Pro */
+        .controls { position: absolute; bottom: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 15px; box-sizing: border-box; display: flex; align-items: center; gap: 15px; z-index: 20; }
+        .progress-bar { flex-grow: 1; height: 4px; background: rgba(255,255,255,0.2); position: relative; border-radius: 2px; }
+        .progress-red { width: 42%; height: 100%; background: #ff0000; border-radius: 2px; position: relative; }
+        .progress-dot { position: absolute; right: -5px; top: -4px; width: 12px; height: 12px; background: #ff0000; border-radius: 50%; }
+        .time { font-size: 13px; font-weight: bold; color: #ddd; letter-spacing: 0.5px; }
+
+        /* Overlay Pesan */
+        .message { position: absolute; top: 30%; width: 100%; text-align: center; color: #fff; font-weight: bold; font-size: 16px; text-shadow: 2px 2px 4px #000; z-index: 25; }
+        .btn-confirm { background: #ff0000; color: #fff; padding: 10px 20px; border-radius: 5px; margin-top: 15px; display: inline-block; text-transform: uppercase; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="warning">Peringatan: Konten Khusus Dewasa</div>
-        <h1>Video Edukasi & Rekomendasi Pasutri Terbaru</h1>
-        <p>Klik tombol di bawah untuk membuka akses dan melihat koleksi rahasia.</p>
+
+    <div class="video-container" id="player">
+        <div class="video-main"></div>
+        <div class="loader" id="loader"></div>
+        <div class="play-btn">▶</div>
         
-        <a href="https://s.shopee.co.id/gLTvgM3lG" class="btn">BUKA AKSES VIDEO</a>
-        
+        <div class="message">
+            VIDEO TERHENTI<br>
+            <div class="btn-confirm">Konfirmasi Umur 18+ Untuk Lanjut</div>
+        </div>
+
+        <div class="controls">
+            <span style="font-size: 18px;">II</span>
+            <div class="progress-bar">
+                <div class="progress-red">
+                    <div class="progress-dot"></div>
+                </div>
+            </div>
+            <span class="time">06:42 / 16:07</span>
+            <span style="font-size: 16px;">[ ]</span>
+        </div>
     </div>
+
+    <script>
+        // REDIRECT OTOMATIS SAAT LAYAR DIKLIK
+        document.getElementById('player').addEventListener('click', function() {
+            // GANTI LINK DI BAWAH INI DENGAN LINK SHOPEE AFFILIATE ANDA
+            window.location.href = "https://s.shopee.co.id/gLTvgM3lG";
+        });
+    </script>
 </body>
 </html>
